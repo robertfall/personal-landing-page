@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import {
   Links,
   LiveReload,
@@ -8,9 +8,11 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "~/styles/root.css";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "My Place For Things | Robert Herbst",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -21,7 +23,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ fontSize: "16px" }}>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
@@ -30,3 +32,7 @@ export default function App() {
     </html>
   );
 }
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: styles }];
+};

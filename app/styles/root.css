@@ -1,0 +1,22 @@
+:root {
+  --color-bg: white;
+  --color-fg: black;
+  --color-primary: DeepSkyBlue;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: black;
+    --color-fg: white;
+    --color-primary: DeepSkyBlue;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+
+  font-size: 16px;
+  font-family: "system-ui, sans-serif";
+  line-height: "1.4";
+}

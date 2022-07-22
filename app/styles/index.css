@@ -1,0 +1,50 @@
+.banner {
+  padding-top: 5vh;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .banner {
+    font-size: 3rem;
+  }
+}
+.container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    30deg,
+    Yellow,
+    GreenYellow,
+    MediumSpringGreen,
+    DeepSkyBlue,
+    DarkViolet,
+    Fuchsia,
+    DeepPink
+  );
+  width: 10vh;
+  height: 15vh;
+  margin: auto;
+  transform: skew(-0.2rad);
+}
+
+.external-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.external-links a, .external-links:visited {
+  color: var(--color-primary);
+}
