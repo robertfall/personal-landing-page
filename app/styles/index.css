@@ -44,7 +44,7 @@
   justify-content: space-around;
 }
 
-
-.external-links a, .external-links:visited {
+.external-links a,
+.external-links:visited {
   color: var(--color-primary);
 }
